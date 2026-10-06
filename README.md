@@ -2,6 +2,12 @@
 
 A non-commercial fan-made crafting calculator published under the **Special Feelings** name.
 
+## Development / authorship disclaimer
+
+All source code, implementation, deployment setup, and technical changes in this repository were generated and implemented with **ChatGPT** under the direction, testing, and feature requests of **Special Feelings**.
+
+The owner of the Special Feelings account is **not a lawyer and does not claim legal or software-development expertise**. This project should not be read as legal advice, a legal opinion, or a representation that every possible use is legally cleared. If a rights holder raises a legitimate concern, the project may be changed or material may be removed.
+
 ## Publishing with GitHub Pages
 
 This project is intentionally a static site. Put these files in the root of a public GitHub repository and enable GitHub Pages from the `main` branch / repository root.
