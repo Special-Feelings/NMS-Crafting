@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Special Feelings — Unofficial NMS Crafting Calculator</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header><div class="brand">SPECIAL <span>FEELINGS</span></div><div class="tag">Unofficial NMS Crafting Calculator <small>public build</small></div></header>
+<main>
+<section class="panel selector">
+  <div class="selector-title">Crafting Calculator</div>
+  <div class="area-filter-wrap">
+  <div class="area-label">Recipe Area</div>
+  <div class="area-filters" id="areaFilters">
+    <button class="area-filter active" data-area="all">All Areas</button>
+    <button class="area-filter" data-area="products">Products</button>
+    <button class="area-filter" data-area="base">Base</button>
+    <button class="area-filter" data-area="corvette">Corvette</button>
+    <button class="area-filter" data-area="exosuit">Exosuit</button>
+    <button class="area-filter" data-area="starship">Starship</button>
+    <button class="area-filter" data-area="multitool">Multi-Tool</button>
+    <button class="area-filter" data-area="exocraft">Exocraft</button>
+    <button class="area-filter" data-area="freighter">Freighter</button>
+    <button class="area-filter" data-area="deployable">Deployables</button>
+  </div>
+</div>
+<div class="selector-row">
+    <div class="combo" id="combo"><input id="search" value="Stasis Device" autocomplete="off" aria-label="Item"><div id="opts" class="opts hidden"></div></div>
+    <input id="qty" class="qty" type="number" min="1" value="1" aria-label="Quantity">
+    <button id="calc">Calculate</button>
+  </div>
+  <div class="craft-filters" id="craftFilters">
+    <button class="filter active" data-filter="final">Final</button>
+    <button class="filter" data-filter="mid">Mid-Step</button>
+    <button class="filter" data-filter="all">All</button>
+  </div>
+  <div id="msg"></div><div id="dataStatus" class="data-status"></div>
+</section>
+
+<section class="panel costs">
+ <div class="section-head"><h2>Cost Breakdown</h2><span id="costSubtitle"></span></div>
+ <div class="cost-grid">
+   <div class="cost-card"><span>Final product</span><div class="final-product-line"><span id="finalGlyph" class="sf-glyph" aria-hidden="true"></span><div><strong id="finalName"></strong><small id="finalQty"></small></div></div></div>
+   <div class="cost-card"><span>Product value</span><strong id="finalValue">—</strong><small>catalog/base value</small></div>
+   <div class="cost-card"><span>Material value</span><strong id="materialValue">—</strong><small>base resources</small></div>
+   <div class="cost-card"><span>Value difference</span><strong id="difference">—</strong><small>product − materials</small></div>
+ </div>
+ <div class="material-strip"><div class="strip-head">Base material totals</div><div id="materialChips"></div></div>
+</section>
+
+<section class="panel">
+ <div class="section-head"><h2>Recipe Tree</h2><div><button class="small" id="collapseAll">Collapse all</button><button class="small" id="expandAll">Expand all</button></div></div>
+ <div class="tree-key"><span class="dot craftdot"></span>Crafted component <span class="dot rawdot"></span>Base material</div>
+ <div class="tree-columns"><span>Quantity / Item</span><span>Unit value</span><span>Line value</span></div>
+ <div id="tree" class="tree"></div>
+</section>
+
+<section class="panel">
+ <div class="section-head"><h2>Crafting Steps</h2><span>Prerequisites first</span></div>
+ <div id="steps" class="steps"></div>
+</section>
+</main>
+<footer class="site-footer">
+  <strong>Special Feelings</strong> — unofficial, non-commercial fan-made crafting calculator.<br>
+  No Man's Sky and related names are the property of their respective rights holders. This project is not affiliated with or endorsed by Hello Games.<br>
+  This public build distributes no game artwork, audio, executable code, screenshots, or extracted image assets. Recipe names, quantities, values, and dependency relationships are presented as factual reference data.
+</footer>
+<script src="data/remote_sources.js"></script>
+<script src="app.js"></script></body></html>
